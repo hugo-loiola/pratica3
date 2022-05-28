@@ -8,7 +8,7 @@ void main() {
   runApp(const MyApp());
 }
 
-final MaterialColor colorSeed = Colors.red;
+const MaterialColor colorSeed = Colors.indigo;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

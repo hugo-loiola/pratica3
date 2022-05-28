@@ -28,23 +28,23 @@ class Lista extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add, color: Colors.white),
         backgroundColor: Colors.orange,
         onPressed: () => {Navigator.pushNamed(context, "/novoLugar")},
+        child: const Icon(Icons.add, color: Colors.white),
       ),
       body: SafeArea(
         child: ListView.builder(
             itemBuilder: (context, index) => Card(
                   elevation: 6,
-                  margin: EdgeInsets.all(16),
+                  margin: const EdgeInsets.all(16),
                   child: ListTile(
                     leading: CircleAvatar(
-                      child: Text(lista[index]['id'].toString()),
                       backgroundColor: Colors.indigo,
+                      child: Text(lista[index]['id'].toString()),
                     ),
                     title: Text(lista[index]["title"]),
                     subtitle: Text(lista[index]['subtitle']),
-                    trailing: Icon(
+                    trailing: const Icon(
                       Icons.airplane_ticket_outlined,
                       color: Colors.orange,
                     ),
