@@ -7,18 +7,13 @@ class NovoLugar extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Novo Lugar',
-          style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.indigo,
         centerTitle: true,
         actions: [
           TextButton(
               onPressed: () => {Navigator.pop(context)},
               child: const Text(
                 'Adicionar',
-                style: TextStyle(
-                  color: Colors.orange,
-                ),
               ))
         ],
       ),
@@ -28,43 +23,33 @@ class NovoLugar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.all(16),
             child: TextField(
-              cursorColor: Colors.white,
               decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.place_outlined,
-                    color: Colors.white,
                   ),
                   label: Text("Lugar"),
-                  labelStyle: TextStyle(color: Colors.orange),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
-                      borderSide: BorderSide(color: Colors.orange)),
+                      borderSide: BorderSide(color: Colors.indigo)),
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.orange,
-                          width: 1,
-                          style: BorderStyle.solid))),
+                      borderSide:
+                          BorderSide(width: 1, style: BorderStyle.solid))),
             ),
           ),
           Padding(
             padding: EdgeInsets.all(16),
             child: TextField(
-              cursorColor: Colors.white,
               decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.description_outlined,
-                    color: Colors.white,
                   ),
                   label: Text("Descrição"),
-                  labelStyle: TextStyle(color: Colors.orange),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
-                      borderSide: BorderSide(color: Colors.orange)),
+                      borderSide: BorderSide(color: Colors.indigo)),
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.orange,
-                          width: 1,
-                          style: BorderStyle.solid))),
+                      borderSide:
+                          BorderSide(width: 1, style: BorderStyle.solid))),
             ),
           ),
         ],
