@@ -4,10 +4,6 @@ export 'lista.dart';
 class Lista extends StatelessWidget {
   Lista({Key? key}) : super(key: key);
 
-  final List lista = List.generate(100, (index) {
-    return {"id": index, "title": "Lugar", "subtitle": "Esse lugar blablabla"};
-  });
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,20 +28,28 @@ class Lista extends StatelessWidget {
       ),
       body: SafeArea(
         child: ListView.builder(
+            itemCount: 100,
             itemBuilder: (context, index) => Card(
-                  elevation: 6,
-                  margin: const EdgeInsets.all(16),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      child: Text(lista[index]['id'].toString()),
-                    ),
-                    title: Text(lista[index]["title"]),
-                    subtitle: Text(lista[index]['subtitle']),
-                    trailing: const Icon(
-                      Icons.airplane_ticket_outlined,
-                    ),
+                elevation: 10,
+                margin: const EdgeInsets.all(16),
+                child: Padding(
+                  padding: const EdgeInsets.all(5),
+                  child: Column(
+                    children: [
+                      ListTile(
+                        title: Text("Lugar ${index + 1}"),
+                        subtitle: Text('Lugar maravilhoso!'),
+                        trailing: IconButton(
+                            onPressed: () => {},
+                            icon: Icon(Icons.airplane_ticket_outlined)),
+                      ),
+                      Container(
+                        child: Image.network(
+                            'https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/02/nyan-cat-1.gif'),
+                      )
+                    ],
                   ),
-                )),
+                ))),
       ),
     );
   }
